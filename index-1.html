@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>오픽 모의고사 2회</title> <!-- 타이틀 입력 -->
+
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1 id="page-title"></h1>
+                
+        <div id="transcript"></div>
+
+        <div id="audioPlayerContainer">
+
+            <audio id="audioPlayer" controls> <!-- 오디오 파일 업로드 -->
+
+                <source src="media/test.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        let transcriptData;
+        
+        fetch('media/test.json') // JSON 파일 업로드
+
+            .then(response => response.json())
+            .then(data => {
+                transcriptData = data;
+                if (transcriptData && transcriptData.words) {
+                    document.dispatchEvent(new CustomEvent('transcriptLoaded', { detail: transcriptData }));
+                }
+            })
+            .catch(error => console.error('Error fetching transcript:', error));
+    </script>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
