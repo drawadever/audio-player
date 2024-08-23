@@ -1,0 +1,69 @@
+/* style.css */
+
+/* 전반적인 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 100%;
+    max-width: 708px;
+    padding: 20px 15px 100px 15px;
+    box-sizing: border-box; /* 패딩과 경계가 포함된 전체 너비 계산 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 헤딩 스타일 */
+h1 {
+    text-align: center;
+    color: #37352f;
+}
+
+/* 오디오 플레이어 컨테이너 스타일 */
+#audioPlayerContainer {
+    position: fixed; /* 화면 하단에 고정 */
+    bottom: 0; /* 화면의 맨 아래에 위치 */
+    left: 0; /* 화면의 왼쪽 끝에 위치 */
+    width: 100%; /* 화면 너비 전체를 차지 */
+    padding: 20px 0px;
+    background-color: #ffffff; /* 배경색 추가로 시각적 분리 */
+    z-index: 1000; /* 다른 요소 위에 오도록 설정 */
+    display: flex; /* 내부 요소를 중앙 정렬하기 위한 flexbox 설정 */
+    justify-content: center; /* 내부 요소 중앙 정렬 */
+    flex-direction: column; /* 요소들을 세로로 배치 */
+    align-items: center; /* 중앙 정렬 */
+}
+
+/* 오디오 플레이어 스타일 */
+#audioPlayer {
+    max-width: 1000px; /* 내부 요소 최대 너비 제한 */
+    width: 100%; /* 최대 너비까지 차지하도록 설정 */
+}
+
+/* 변환된 텍스트 스타일 */
+#transcript {
+    color: #37352f;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 18px; /* 폰트 크기 설정 */
+}
+
+/* 단어에 호버 시 배경 색상 변경 */
+.word:hover {
+    background-color: #e5e7e8;
+    padding: .125rem;
+    margin: -.125rem;
+    border-radius: .25rem;
+    cursor: pointer; /* 손가락 모양 포인터 */
+}
