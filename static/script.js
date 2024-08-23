@@ -2,6 +2,13 @@ document.addEventListener('transcriptLoaded', function(event) {
     const audioPlayer = document.getElementById('audioPlayer');
     const transcriptElement = document.getElementById('transcript');
     const transcriptData = event.detail;
+    
+    // <h1> 요소에 <title> 태그의 내용을 불러오기
+    const titleText = document.title;
+    const pageTitleElement = document.getElementById('page-title');
+    if (pageTitleElement) {
+        pageTitleElement.textContent = titleText; //
+    }
 
     if (audioPlayer && transcriptElement && transcriptData.words) {
         transcriptElement.innerHTML = '';
