@@ -35,13 +35,17 @@ h1 {
     bottom: 0; /* 화면의 맨 아래에 위치 */
     left: 0; /* 화면의 왼쪽 끝에 위치 */
     width: 100%; /* 화면 너비 전체를 차지 */
-    padding: 20px 0px;
-    background-color: #ffffff; /* 배경색 추가로 시각적 분리 */
+    padding: 40px 10px 20px 10px;
+    background: linear-gradient(to top, 
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 0.5) 80%,
+                rgba(255, 255, 255, 0) 100%);
     z-index: 1000; /* 다른 요소 위에 오도록 설정 */
     display: flex; /* 내부 요소를 중앙 정렬하기 위한 flexbox 설정 */
     justify-content: center; /* 내부 요소 중앙 정렬 */
     flex-direction: column; /* 요소들을 세로로 배치 */
     align-items: center; /* 중앙 정렬 */
+    box-sizing: border-box;
 }
 
 /* 오디오 플레이어 스타일 */
