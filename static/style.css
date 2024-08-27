@@ -71,3 +71,11 @@ h1 {
     border-radius: .25rem;
     cursor: pointer; /* 손가락 모양 포인터 */
 }
+
+.segment:hover {
+    background-color: #e5e7e8;
+    padding: .125rem;
+    margin: -.125rem;
+    border-radius: .25rem;
+    cursor: pointer; /* 손가락 모양 포인터 */
+}
