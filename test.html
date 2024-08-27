@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>오픽 모의고사 1회</title> <!-- 타이틀 입력 -->
+    <title>Test</title> <!-- 타이틀 입력 -->
 
     <link rel="stylesheet" href="static/style.css">
     <link rel="icon" href="static/favicon.png" type="image/png">
@@ -17,9 +17,9 @@
 
         <div id="audioPlayerContainer">
 
-            <audio id="audioPlayer" controls> <!-- 오디오 파일 업로드 -->
+            <audio id="audioPlayer" controls>
 
-                <source src="media/test-long.mp3" type="audio/mpeg">
+                <source src="media/test.mp3" type="audio/mpeg"> <!-- 오디오 파일 업로드 -->
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -28,7 +28,7 @@
     <script>
         let transcriptData;
         
-        fetch('media/test-long.json') // JSON 파일 업로드
+        fetch('media/test.json') // JSON 파일 업로드
 
             .then(response => response.json())
             .then(data => {
