@@ -32,9 +32,9 @@
             .then(data => {
                 transcriptData = data;
                 // 불러온 데이터가 있는지 확인
-                if (transcriptData && transcriptData.words) {
+                if (transcriptData && (transcriptData.words || transcriptData.segments)) {
                     document.dispatchEvent(new CustomEvent('transcriptLoaded', { detail: transcriptData }));
-                }
+                }          
             })
             .catch(error => console.error('Error fetching transcript:', error));
     </script>
